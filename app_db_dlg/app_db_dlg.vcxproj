@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{84DCE88A-37E4-4CFD-B39C-DF34A9F4901A}</ProjectGuid>
+    <Keyword>MFCDLLProj</Keyword>
+    <RootNamespace>appdbdlg</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;../skgui;../3rdparty/CGridListCtrl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\app_db_dlg.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(ProjectName).lib" "$(SolutionDir)x64\lib"
+copy "$(OutDir)$(ProjectName).dll" "$(SolutionDir)x64\bin"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;../skgui;../3rdparty/CGridListCtrl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\app_db_dlg.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(ProjectName).lib" "$(SolutionDir)x86\libd"
+copy "$(OutDir)$(ProjectName).dll" "$(SolutionDir)x86\bind"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;../skgui;../3rdparty/CGridListCtrl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\app_db_dlg.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(ProjectName).lib" "$(SolutionDir)x64\libd"
+copy "$(OutDir)$(ProjectName).dll" "$(SolutionDir)x64\bind"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.;../skgui;../3rdparty/CGridListCtrl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\app_db_dlg.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(ProjectName).lib" "$(SolutionDir)x86\lib"
+copy "$(OutDir)$(ProjectName).dll" "$(SolutionDir)x86\bin"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitCombo.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitDateTime.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitEdit.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitHyperLink.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitImage.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitMultilineEdit.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitProgress.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitText.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridColumnTraitTextButton.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridListCtrlEx.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridListCtrlGroups.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridRowTraitText.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\CGridRowTraitXP.cpp" />
+    <ClCompile Include="..\3rdparty\CGridListCtrl\ViewConfigSection.cpp" />
+    <ClCompile Include="..\skgui\DiskObject.cpp" />
+    <ClCompile Include="..\skgui\IconButton.cpp" />
+    <ClCompile Include="..\skgui\ListDemoViewPrint.cpp" />
+    <ClCompile Include="..\skgui\Theme.cpp" />
+    <ClCompile Include="..\skgui\vComboBox.cpp" />
+    <ClCompile Include="..\skgui\xShadeButton.cpp" />
+    <ClCompile Include="..\skgui\xSkinButton.cpp" />
+    <ClCompile Include="app_db_dlg.cpp" />
+    <ClCompile Include="app_db_dlg_exe.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="ManagerDlg.cpp" />
+    <ClCompile Include="MemberDlg.cpp" />
+    <ClCompile Include="MembershipDlg.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app_db_dlg.def" />
+    <None Include="res\app_db_dlg.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTrait.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitCombo.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitDateTime.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitEdit.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitHyperLink.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitImage.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitMultilineEdit.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitProgress.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitText.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitTextButton.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridColumnTraitVisitor.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridListCtrlEx.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridListCtrlGroups.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridRowTrait.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridRowTraitText.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridRowTraitVisitor.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\CGridRowTraitXP.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\DefsGridList.h" />
+    <ClInclude Include="..\3rdparty\CGridListCtrl\ViewConfigSection.h" />
+    <ClInclude Include="..\include\app_db_dlg_dll.h" />
+    <ClInclude Include="..\skgui\DiskObject.h" />
+    <ClInclude Include="..\skgui\IconButton.h" />
+    <ClInclude Include="..\skgui\ListDemoViewPrint.h" />
+    <ClInclude Include="..\skgui\memdc.h" />
+    <ClInclude Include="..\skgui\Theme.h" />
+    <ClInclude Include="..\skgui\vComboBox.h" />
+    <ClInclude Include="..\skgui\xShadeButton.h" />
+    <ClInclude Include="..\skgui\xSkinButton.h" />
+    <ClInclude Include="app_db_dlg.h" />
+    <ClInclude Include="app_db_dlg_exe.h" />
+    <ClInclude Include="DialogDefs.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="ManagerDlg.h" />
+    <ClInclude Include="MemberDlg.h" />
+    <ClInclude Include="MembershipDlg.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app_db_dlg.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
